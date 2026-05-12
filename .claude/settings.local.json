@@ -10,7 +10,10 @@
       "Bash(python phase-a/generate_testset.py)",
       "Bash(Get-Content \"C:\\\\Users\\\\NGUYEN~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Nguyen-Duc-Hoang-Phuc-aithucchien-Day24-2A202600150-Nguyen-Duc-Hoang-Phuc-Lab24-lab24-eval-guardrails\\\\568d94ca-c964-40df-8c43-f6bd7868b99c\\\\tasks\\\\btqy8pkzd.output\" -Wait)",
       "Bash(Select-String -Pattern \"Saved|Error|Traceback|distribution|evolution|row count|Warning|Done|Cost|Generating|Loaded|progress|Exception\")",
-      "Bash(conda run *)"
+      "Bash(conda run *)",
+      "Bash(python -c \"import pandas as pd; df=pd.read_csv\\('phase-a/testset_v1.csv', encoding='utf-8-sig'\\); print\\(df.columns.tolist\\(\\)\\); print\\(len\\(df\\)\\)\")",
+      "Bash(PYTHONUTF8=1 /c/Users/NguyenDucHoangPhuc/.conda/envs/aithucchien/python.exe -)",
+      "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; $env:PYTHONUTF8 = \"1\"; $python = \"C:\\\\Users\\\\NguyenDucHoangPhuc\\\\.conda\\\\envs\\\\aithucchien\\\\python.exe\"; & $python \"d:\\\\Nguyen_Duc_Hoang_Phuc\\\\aithucchien\\\\Day24\\\\2A202600150-Nguyen_Duc_Hoang_Phuc-Lab24\\\\lab24-eval-guardrails\\\\phase-b\\\\bias_analysis.py\" 2>&1)"
     ]
   }
 }
