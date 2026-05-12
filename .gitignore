@@ -1,0 +1,37 @@
+# Environment secrets
+.env
+.env.local
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Temp CSV dumps
+tmp/*.csv
+/tmp/*.csv
+
+# Demo recordings
+demo/*.mp4
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build / dist
+*.egg-info/
+dist/
+build/
