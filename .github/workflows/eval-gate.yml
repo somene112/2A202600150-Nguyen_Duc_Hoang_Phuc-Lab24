@@ -1,0 +1,56 @@
+name: RAGAS Eval Gate
+
+"on":
+  pull_request:
+    branches: [main]
+
+jobs:
+  eval-gate:
+    name: RAGAS metric threshold check
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      # ── 1. Checkout ────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Python setup ────────────────────────────────────────────────────
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+
+      # ── 3. Install dependencies ────────────────────────────────────────────
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      # ── 4. Run eval gate (loads pre-computed phase-a/ragas_results.csv) ────
+      #
+      #   Fast CI mode: --results-csv skips the expensive Day18 pipeline run
+      #   and validates the committed ragas_results.csv against thresholds.
+      #
+      #   Full pipeline mode (local only): remove --results-csv and ensure
+      #   DAY18_PIPELINE_PATH points to the Day18 repo root.
+      #
+      - name: Run RAGAS eval gate
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          FORCE_COLOR: "1"
+        run: |
+          python scripts/run_eval.py \
+            --threshold faithfulness=0.85 \
+            --threshold answer_relevancy=0.80 \
+            --threshold context_precision=0.70 \
+            --threshold context_recall=0.75 \
+            --results-csv phase-a/ragas_results.csv
+
+      # ── 5. Upload scores CSV (always, even on failure) ─────────────────────
+      - name: Upload RAGAS results artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ragas-results-${{ github.run_id }}
+          path: phase-a/ragas_results.csv
+          retention-days: 30

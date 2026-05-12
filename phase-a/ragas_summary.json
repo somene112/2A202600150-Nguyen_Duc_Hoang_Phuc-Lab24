@@ -1,0 +1,15 @@
+{
+  "model": "gpt-4o-mini",
+  "num_questions": 53,
+  "scores": {
+    "faithfulness": 0.9607,
+    "answer_relevancy": 0.0,
+    "context_precision": 0.9387,
+    "context_recall": 0.75
+  },
+  "cost": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_cost_usd": 0.0
+  }
+}

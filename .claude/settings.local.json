@@ -9,7 +9,8 @@
       "Bash(python -c ' *)",
       "Bash(python phase-a/generate_testset.py)",
       "Bash(Get-Content \"C:\\\\Users\\\\NGUYEN~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Nguyen-Duc-Hoang-Phuc-aithucchien-Day24-2A202600150-Nguyen-Duc-Hoang-Phuc-Lab24-lab24-eval-guardrails\\\\568d94ca-c964-40df-8c43-f6bd7868b99c\\\\tasks\\\\btqy8pkzd.output\" -Wait)",
-      "Bash(Select-String -Pattern \"Saved|Error|Traceback|distribution|evolution|row count|Warning|Done|Cost|Generating|Loaded|progress|Exception\")"
+      "Bash(Select-String -Pattern \"Saved|Error|Traceback|distribution|evolution|row count|Warning|Done|Cost|Generating|Loaded|progress|Exception\")",
+      "Bash(conda run *)"
     ]
   }
 }

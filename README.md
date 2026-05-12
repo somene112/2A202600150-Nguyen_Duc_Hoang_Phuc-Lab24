@@ -46,6 +46,23 @@ pytest
 ### Phase A — Baseline RAG
 Build a simple retrieval-augmented generation pipeline and generate a Q&A evaluation dataset.
 
+#### Phase A Results — RAGAS Baseline (n=53, judge: gpt-4o-mini)
+
+| Metric            |  Score | Target | Status |
+| ----------------- | -----: | -----: | ------ |
+| faithfulness      | 0.9607 |   0.85 | PASS   |
+| answer_relevancy  |    N/A |   0.80 | —      |
+| context_precision | 0.9387 |   0.70 | PASS   |
+| context_recall    | 0.7500 |   0.75 | PASS   |
+
+**Total API cost:** $0.00 USD (token usage callback returned 0 — RAGAS 0.4.x cost tracking not supported in this configuration)
+
+**Observations:**
+
+- `answer_relevancy` returned NaN for all 53 samples. Root cause: the RAGAS 0.4.x old-style `answer_relevancy` singleton requires a LangChain-compatible embeddings object with `.embed_query()`. The native `RagasOpenAIEmbeddings` does not expose this method; the fix (wrapping with `LangchainEmbeddingsWrapper`) is applied in `scripts/run_eval.py` and `phase-a/run_ragas.py`.
+- `faithfulness` (0.9607) and `context_precision` (0.9387) are well above threshold — the Day18 extractive pipeline rarely hallucinates and retrieves highly relevant chunks.
+- `context_recall` (0.7500) just meets the 0.75 target; multi-hop reasoning questions are the primary drag (see `phase-a/failure_analysis.md`, Cluster 0).
+
 ### Phase B — RAGAS Evaluation
 Score the RAG system using RAGAS metrics: faithfulness, answer relevancy, context precision, context recall.
 
