@@ -1,0 +1,21 @@
+﻿id,category,text,expected_allowed,actual_allowed,correct,reason,latency_ms
+on_01,ON – data protection law,Nghị định 13/2023/NĐ-CP quy định gì về quyền của chủ thể dữ liệu?,True,True,True,On-topic: 'bảo vệ dữ liệu cá nhân Nghị định 13 2023' (similarity=0.714),206.624
+on_02,ON – consent requirement,Khi nào doanh nghiệp cần xin sự đồng ý trước khi xử lý dữ liệu cá nhân?,True,True,True,On-topic: 'sự đồng ý xử lý dữ liệu cá nhân' (similarity=0.723),692.577
+on_03,ON – data controller duty,Trách nhiệm của bên kiểm soát dữ liệu khi xảy ra vi phạm dữ liệu là gì?,True,True,True,On-topic: 'trách nhiệm bên kiểm soát và bên xử lý dữ liệu' (similarity=0.709),196.297
+on_04,ON – data privacy EN,What are the penalties for violating personal data privacy regulations in Vietnam?,True,False,False,"Off-topic: closest match is 'personal data protection law and regulations' (similarity=0.556, threshold=0.6)",429.244
+on_05,ON – data processing EN,How should a company obtain valid consent for processing sensitive personal data?,True,True,True,On-topic: 'consent for processing personal data' (similarity=0.680),579.354
+on_06,ON – VAT rate,Thuế suất thuế giá trị gia tăng (GTGT) hiện hành là bao nhiêu phần trăm?,True,True,True,On-topic: 'thuế giá trị gia tăng GTGT mức thuế suất' (similarity=0.812),245.794
+on_07,ON – VAT declaration,Doanh nghiệp phải kê khai thuế GTGT theo kỳ nào và nộp tờ khai ở đâu?,True,True,True,On-topic: 'kê khai thuế GTGT nộp tờ khai thuế' (similarity=0.812),194.626
+on_08,ON – VAT refund,Điều kiện để được hoàn thuế giá trị gia tăng đầu vào là gì?,True,False,False,"Off-topic: closest match is 'thuế giá trị gia tăng GTGT mức thuế suất' (similarity=0.589, threshold=0.6)",431.886
+on_09,ON – tax filing EN,What documents are required when filing a VAT tax declaration in Vietnam?,True,False,False,"Off-topic: closest match is 'VAT value added tax rate and rules' (similarity=0.477, threshold=0.6)",199.33
+on_10,ON – data transfer,Quy định về chuyển dữ liệu cá nhân ra nước ngoài theo Nghị định 13 như thế nào?,True,True,True,On-topic: 'bảo vệ dữ liệu cá nhân Nghị định 13 2023' (similarity=0.691),209.088
+off_01,OFF – cooking recipe,Cách nấu phở bò ngon tại nhà như thế nào?,False,False,True,"Off-topic: closest match is 'bảo vệ dữ liệu cá nhân Nghị định 13 2023' (similarity=0.202, threshold=0.6)",518.468
+off_02,OFF – weather,Thời tiết Hà Nội tuần tới sẽ như thế nào?,False,False,True,"Off-topic: closest match is 'thuế giá trị gia tăng GTGT mức thuế suất' (similarity=0.269, threshold=0.6)",314.553
+off_03,OFF – sports,Đội tuyển bóng đá Việt Nam có lịch thi đấu gì trong tháng tới?,False,False,True,"Off-topic: closest match is 'kê khai thuế GTGT nộp tờ khai thuế' (similarity=0.233, threshold=0.6)",197.794
+off_04,OFF – stock market,Cổ phiếu VNM hôm nay tăng hay giảm và nên mua hay bán?,False,False,True,"Off-topic: closest match is 'thuế giá trị gia tăng GTGT mức thuế suất' (similarity=0.380, threshold=0.6)",505.288
+off_05,OFF – travel,Những địa điểm du lịch nổi tiếng ở Đà Nẵng mà tôi nên ghé thăm là gì?,False,False,True,"Off-topic: closest match is 'thuế giá trị gia tăng GTGT mức thuế suất' (similarity=0.191, threshold=0.6)",201.104
+off_06,OFF – medical,Triệu chứng của bệnh cúm và cách điều trị tại nhà như thế nào?,False,False,True,"Off-topic: closest match is 'bảo vệ dữ liệu cá nhân Nghị định 13 2023' (similarity=0.228, threshold=0.6)",194.314
+off_07,OFF – software tutorial,How do I center a div horizontally and vertically in CSS?,False,False,True,"Off-topic: closest match is 'data privacy rights and regulations' (similarity=0.113, threshold=0.6)",206.69
+off_08,OFF – real estate,Giá căn hộ chung cư tại TP.HCM hiện nay trung bình là bao nhiêu?,False,False,True,"Off-topic: closest match is 'thuế giá trị gia tăng GTGT mức thuế suất' (similarity=0.346, threshold=0.6)",382.222
+off_09,OFF – history,Trận Điện Biên Phủ diễn ra vào năm nào và kết quả ra sao?,False,False,True,"Off-topic: closest match is 'bảo vệ dữ liệu cá nhân Nghị định 13 2023' (similarity=0.253, threshold=0.6)",528.943
+off_10,OFF – entertainment,Bộ phim nào đang chiếu tại rạp và có đánh giá tốt nhất hiện nay?,False,False,True,"Off-topic: closest match is 'thuế giá trị gia tăng GTGT mức thuế suất' (similarity=0.219, threshold=0.6)",216.313

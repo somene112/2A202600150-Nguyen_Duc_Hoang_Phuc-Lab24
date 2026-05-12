@@ -1,0 +1,58 @@
+{
+  "L1": {
+    "P50": 340.1,
+    "P95": 694.5,
+    "P99": 1236.6,
+    "n": 99,
+    "label": "L1 (all)"
+  },
+  "L2": {
+    "P50": 83.2,
+    "P95": 123.1,
+    "P99": 124.0,
+    "n": 50,
+    "label": "L2 (non-blocked)"
+  },
+  "L3": {
+    "P50": 380.3,
+    "P95": 551.0,
+    "P99": 650.7,
+    "n": 50,
+    "label": "L3 (non-blocked)"
+  },
+  "total": {
+    "P50": 571.8,
+    "P95": 1200.3,
+    "P99": 1754.6,
+    "n": 99,
+    "label": "Total (all)"
+  },
+  "baseline": {
+    "P50": 78.0,
+    "P95": 123.3,
+    "P99": 123.9,
+    "n": 99,
+    "label": "Baseline (L2 only)"
+  },
+  "overhead": {
+    "P50": 486.2,
+    "P95": 1146.6,
+    "P99": 1676.5,
+    "n": 99,
+    "label": "Overhead (guarded-baseline)"
+  },
+  "parallelism": {
+    "wall_ms": 415.3,
+    "pii_ms": 10.5,
+    "topic_ms": 412.8,
+    "sequential_ms": 423.4,
+    "is_parallel": true,
+    "speedup": 1.02
+  },
+  "meta": {
+    "n_queries": 99,
+    "n_blocked_L1": 49,
+    "n_blocked_L3": 0,
+    "n_passed": 50
+  }
+}

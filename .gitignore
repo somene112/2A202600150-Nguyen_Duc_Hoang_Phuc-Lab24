@@ -35,3 +35,5 @@ Thumbs.db
 *.egg-info/
 dist/
 build/
+
+.claude/settings.local.json".claude/settings.local.json" 
